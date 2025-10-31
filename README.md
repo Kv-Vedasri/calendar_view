@@ -1,4 +1,4 @@
-# 📅 Calendar View Component - Vedasri Uzence Assignment
+# 📅 Calendar View Component
 
 A professional, fully-featured calendar component built from scratch for the Uzence frontend developer assignment.
 
