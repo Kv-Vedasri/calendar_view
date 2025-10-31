@@ -4,8 +4,7 @@ A professional, fully-featured calendar component built from scratch for the Uze
 
 ## 🎯 Assignment Details
 
-**Candidate:** Vedasri  
-**Company:** Uzence  
+
 **Project:** Calendar View Component
 
 ## 🚀 Live Demo
