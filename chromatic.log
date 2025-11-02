@@ -1,0 +1,80 @@
+08:30:13.066 Chromatic CLI v13.3.3
+             https://www.chromatic.com/docs/cli 
+ 
+08:30:13.084 Authenticating with Chromatic 
+08:30:13.084     → Connecting to https://index.chromatic.com
+08:30:14.156 Authenticated with Chromatic
+                 → Using project token '****************db65'
+08:30:14.158 Retrieving git information
+08:30:14.159 execGitCommand: git --version
+08:30:14.179 execGitCommand result: 'git version 2.50.1'
+08:30:14.179 execGitCommand: git --no-pager log -n 1 --format="%H ## %ct ## %ae ## %an"
+08:30:14.189 execGitCommand result: '305633bb353a1e610f9176fc283ab71edf199fdc ## 1762071820 ## 154035170+Kv-Vedasri@users.noreply.github.com ## Kv_Vedasri'
+08:30:14.190 execGitCommand: git branch --show-current
+08:30:14.198 execGitCommand result: 'main'
+08:30:14.213 execGitCommand: git --no-pager log -n 1 --skip=1 --format="%H"
+08:30:14.221 execGitCommand result: '699aa5b10db5c91dcc6ef6a07e5dddeceb6b3ba8'
+08:30:14.222 git info: {"commit":{"commit":"305633bb353a1e610f9176fc283ab71edf199fdc","committedAt":1762071820000,"committerEmail":"154035170+Kv-Vedasri@users.noreply.github.com","committerName":"Kv_Vedasri"},"branch":"main","fromCI":true}
+08:30:14.223 execGitCommand: git config user.email
+08:30:14.232 execGitCommand result: '154035170+Kv-Vedasri@users.noreply.github.com'
+08:30:14.235 execGitCommand: (git diff --name-only --no-relative --diff-filter=d --cached;git diff --name-only --no-relative --diff-filter=d;git ls-files --others --exclude-standard) | git hash-object --stdin-paths | git hash-object --stdin
+08:30:14.482 execGitCommand result: '046be55864577181199a0b2535b9f0ed80987db9'
+08:30:14.483 execGitCommand: git rev-parse --show-toplevel
+08:30:14.495 execGitCommand result: '/workspaces/calendar_view'
+08:30:14.499 execGitCommandOneLine: git log --reverse --format=%cd --date=iso
+08:30:14.513 execGitCommandOneLine: git log --follow --reverse --format=%cd --date=iso -- .storybook
+08:30:14.523 execGitCommandCountLines: git shortlog -sn --all --since="6 months ago"
+08:30:14.541 execGitCommandCountLines: git ls-files -- "*page*.js" "*page*.jsx" "*page*.ts" "*page*.tsx" "*Page*.js" "*Page*.jsx" "*Page*.ts" "*Page*.tsx" "*screen*.js" "*screen*.jsx" "*screen*.ts" "*screen*.tsx" "*Screen*.js" "*Screen*.jsx" "*Screen*.ts" "*Screen*.tsx"
+08:30:14.645 execGitCommand: git config --get remote.origin.url
+08:30:14.655 execGitCommand result: 'https://github.com/Kv-Vedasri/calendar_view'
+08:30:15.419 App firstBuild: %o, lastBuild: %o null null
+08:30:15.428 App has no builds, returning []
+08:30:15.428 Found parentCommits:
+08:30:16.194 Retrieved git information
+                 → Commit '305633b' on branch 'main'; no ancestor found
+08:30:16.195 Collecting Storybook metadata
+08:30:16.197 {"storybookV6error":{"code":"MODULE_NOT_FOUND","requireStack":["/home/codespace/.cache/pnpm/dlx/151b5de861bc3c6e40299f521d022379471f9933a876a26cf634ef634d1ef6c7/19a43b03220-5f6b/node_modules/.pnpm/chromatic@13.3.3/node_modules/chromatic/dist/chunk-TKGT252T.js","/home/codespace/.cache/pnpm/dlx/151b5de861bc3c6e40299f521d022379471f9933a876a26cf634ef634d1ef6c7/19a43b03220-5f6b/node_modules/.pnpm/chromatic@13.3.3/node_modules/chromatic/dist/bin.js"]}}
+08:30:16.236 {"configDirectory":".storybook","mainConfig":{"code":"import type { StorybookConfig } from '@storybook/react-vite';\n\nconst config: StorybookConfig = {\n  \"stories\": [\n    \"../src/**/*.mdx\",\n    \"../src/**/*.stories.@(js|jsx|mjs|ts|tsx)\"\n  ],\n  \"addons\": [\n    \"@storybook/addon-essentials\",\n    \"@storybook/addon-onboarding\",\n    \"@chromatic-com/storybook\",\n    \"@storybook/experimental-addon-test\"\n  ],\n  \"framework\": {\n    \"name\": \"@storybook/react-vite\",\n    \"options\": {}\n  }\n};\nexport default config;"}}
+08:30:16.245 No viewlayer package listed in dependencies. Checking transitive dependencies.
+08:30:16.253 [{"status":"fulfilled","value":{}},{"status":"fulfilled","value":{"version":"8.6.14"}},{"status":"fulfilled","value":{"builder":{"name":"@storybook/react-vite","packageVersion":"8.6.14"}}}]
+08:30:16.255 Collected Storybook metadata
+                 → Storybook 8.6.14; using the @storybook/react-vite builder (8.6.14); no supported addons found
+08:30:16.256 Initializing build
+08:30:16.257 Got environment:
+             {}
+08:30:16.272 Failed to set runtime metadata: Command failed with ENOENT: bun --version
+             spawn bun ENOENT
+08:30:17.039 Initialized build
+                 → Build 4 initialized
+08:30:17.044 Building your Storybook
+08:30:17.045     → Running command: bun run build-storybook --output-dir=/tmp/chromatic--24450-WzBboX8sVHkV
+08:30:17.045     → [*                   ]
+08:30:17.047 Running build command: bun run build-storybook --output-dir=/tmp/chromatic--24450-WzBboX8sVHkV
+08:30:17.049 Runtime metadata: {
+               "nodePlatform": "linux",
+               "nodeVersion": "22.17.0",
+               "packageManager": "bun"
+             }
+08:30:17.058 The CLI tried to run your build-storybook script, but the command failed. This indicates a problem with your Storybook. Here's what to do:
+             
+             - Check the Storybook build log printed below.
+             - Run npm run build-storybook or yarn build-storybook yourself and make sure it outputs a valid Storybook by opening the generated index.html in your browser.
+             - Review the build-storybook CLI options at https://storybook.js.org/docs/api/cli-options#build
+             
+             Command failed with ENOENT: bun run build-storybook '--output-dir=/tmp/chromatic--24450-WzBboX8sVHkV'
+             spawn bun ENOENT
+             
+             ℹ Build command:
+             bun run build-storybook --output-dir=/tmp/chromatic--24450-WzBboX8sVHkV
+             
+             ℹ Runtime metadata:
+             {
+               "nodePlatform": "linux",
+               "nodeVersion": "22.17.0",
+               "packageManager": "bun"
+             }
+             
+             ℹ Storybook build output:
+             /workspaces/calendar_view/build-storybook.log
+08:30:17.059     → Command failed: bun run build-storybook --output-dir=/tmp/chromatic--24450-WzBboX8sVHkV
+08:30:17.089 ℹ Wrote Chromatic diagnostics report to chromatic-diagnostics.json
