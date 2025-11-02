@@ -92,15 +92,6 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.2.7
         version: 1.2.8(@types/react-dom@18.3.7(@types/react@18.3.26))(@types/react@18.3.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@storybook/addon-essentials':
-        specifier: ^8.6.14
-        version: 8.6.14(@types/react@18.3.26)(storybook@8.6.14)
-      '@storybook/addon-interactions':
-        specifier: ^8.6.14
-        version: 8.6.14(storybook@8.6.14)
-      '@storybook/addon-links':
-        specifier: ^8.6.14
-        version: 8.6.14(react@18.3.1)(storybook@8.6.14)
       '@storybook/blocks':
         specifier: ^8.6.14
         version: 8.6.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.6.14)
@@ -186,6 +177,18 @@ importers:
       '@eslint/js':
         specifier: ^9.32.0
         version: 9.38.0
+      '@storybook/addon-a11y':
+        specifier: 8.6.14
+        version: 8.6.14(storybook@8.6.14)
+      '@storybook/addon-essentials':
+        specifier: 8.6.14
+        version: 8.6.14(@types/react@18.3.26)(storybook@8.6.14)
+      '@storybook/addon-interactions':
+        specifier: 8.6.14
+        version: 8.6.14(storybook@8.6.14)
+      '@storybook/addon-links':
+        specifier: 8.6.14
+        version: 8.6.14(react@18.3.1)(storybook@8.6.14)
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.19(tailwindcss@3.4.18)
@@ -1489,6 +1492,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@storybook/addon-a11y@8.6.14':
+    resolution: {integrity: sha512-fozv6enO9IgpWq2U8qqS8MZ21Nt+MVHiRQe3CjnCpBOejTyo/ATm690PeYYRVHVG6M/15TVePb0h3ngKQbrrzQ==}
+    peerDependencies:
+      storybook: ^8.6.14
+
   '@storybook/addon-actions@8.6.14':
     resolution: {integrity: sha512-mDQxylxGGCQSK7tJPkD144J8jWh9IU9ziJMHfB84PKpI/V5ZgqMDnpr2bssTrUaGDqU5e1/z8KcRF+Melhs9pQ==}
     peerDependencies:
@@ -1992,6 +2000,10 @@ packages:
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
+
+  axe-core@4.11.0:
+    resolution: {integrity: sha512-ilYanEU8vxxBexpJd8cWM4ElSQq4QctCLKih0TSfjIfCQTeyH/6zVrmIJfLPrKTKJRbiG+cfnZbQIjAlJmF1jQ==}
+    engines: {node: '>=4'}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -4505,6 +4517,14 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.52.5':
     optional: true
 
+  '@storybook/addon-a11y@8.6.14(storybook@8.6.14)':
+    dependencies:
+      '@storybook/addon-highlight': 8.6.14(storybook@8.6.14)
+      '@storybook/global': 5.0.0
+      '@storybook/test': 8.6.14(storybook@8.6.14)
+      axe-core: 4.11.0
+      storybook: 8.6.14
+
   '@storybook/addon-actions@8.6.14(storybook@8.6.14)':
     dependencies:
       '@storybook/global': 5.0.0
@@ -5085,6 +5105,8 @@ snapshots:
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.1.0
+
+  axe-core@4.11.0: {}
 
   balanced-match@1.0.2: {}
 
